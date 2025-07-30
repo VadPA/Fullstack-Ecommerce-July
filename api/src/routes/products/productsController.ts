@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import { db } from '../../db/index';
-import { productsTable, createProductSchema } from '../../db/productsSchema';
 import { eq } from 'drizzle-orm';
 import _ from 'lodash';
+import { db } from '../../db/index.js';
+import { productsTable } from '../../db/productsSchema.js';
 
 export async function listProducts(req: Request, res: Response) {
   try {
